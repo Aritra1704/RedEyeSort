@@ -42,6 +42,9 @@
     <dimen name="margin_300">300dp</dimen>
     <dimen name="margin_325">325dp</dimen>
     <dimen name="margin_350">350dp</dimen>
+
+    <dimen name="textsize_13">13sp</dimen>
+    <dimen name="textsize_14">14sp</dimen>
     <dimen name="textsize_15">15sp</dimen>
     <dimen name="textsize_16">16sp</dimen>
     <dimen name="textsize_18">18sp</dimen>

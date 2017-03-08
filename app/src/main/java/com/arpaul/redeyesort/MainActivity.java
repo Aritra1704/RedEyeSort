@@ -78,12 +78,6 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         });
 
         getSupportLoaderManager().initLoader(LOADER_FETCH_JSON_DATA, null, this).forceLoad();
-//        new Thread(new Runnable() {
-//            @Override
-//            public void run() {
-//                new InstagramPic().downloadImages();
-//            }
-//        }).start();
     }
 
     @Override
