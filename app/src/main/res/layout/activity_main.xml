@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,35 +7,37 @@
     android:orientation="vertical"
     tools:context="com.arpaul.redeyesort.MainActivity">
 
-    <Button
-        android:id="@+id/btnSplit"
+    <ProgressBar
+        android:id="@+id/pbLoading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Split"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        android:layout_gravity="center" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:weightSum="2">
+        android:orientation="vertical">
 
-        <ImageView
-            android:id="@+id/ivActualImage"
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvList"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_margin="10dp"
-            android:layout_weight="1"
-            android:src="@drawable/welcome2"/>
+            android:layout_height="match_parent"
+            app:layoutManager="LinearLayoutManager"></android.support.v7.widget.RecyclerView>
 
-        <ImageView
-            android:id="@+id/ivModifiedImage"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_margin="10dp"
-            android:layout_weight="1"/>
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No data" />
     </LinearLayout>
-</LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fab_margin"
+        android:layout_gravity="bottom|center_horizontal"
+        android:tint="@color/colorWhite"
+        app:layout_anchorGravity="bottom|center_horizontal"
+        app:srcCompat="@drawable/svg_download" />
+</FrameLayout>
